@@ -1,0 +1,3 @@
+﻿  Calkowanie Numeryczne.cpp
+C:\Users\Bogdan\source\repos\Lozan20\Lab3-Metody-Numeryczne\Calkowanie Numeryczne\Calkowanie Numeryczne.cpp(8,15): warning C4244: "inicjowanie": konwersja z "int" do "float", możliwa utrata danych
+  Calkowanie Numeryczne.vcxproj -> C:\Users\Bogdan\Source\Repos\Lozan20\Lab3-Metody-Numeryczne\Calkowanie Numeryczne\Debug\Calkowanie Numeryczne.exe
