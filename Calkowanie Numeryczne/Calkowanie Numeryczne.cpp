@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#define A 0
+#define B 2
 
 double trapezy(double a, double b,double przedzialy)
 {
@@ -35,25 +37,22 @@ int main()
     switch (choice)
     {
     case 1:
-        std::cout << trapezy(0,2,1);
+        std::cout << trapezy(A,B,1);
         break;
     case 2:
-        std::cout << parabole(0, 2,1);
+        std::cout << parabole(A,B,1);
         break;
     case 3:
-        std::cout << trapezy(0, 2, 10);
+        std::cout << trapezy(A, B, 10);
         break;
     case 4:
         for (int i = 1; i <= 10; i++)
-            std::cout << "Liczba Przedzialow: " << i << " Wynik: " << trapezy(0, 2, i) << std::endl;
+            std::cout << "Liczba Przedzialow: " << i << " Wynik: " << trapezy(A, B, i) << std::endl;
         break;
     case 5:
         for (int i = 1; i <= 10; i++)
-            std::cout << "Liczba Przedzialow: " << i << " Wynik: " << parabole(0, 2, i) << std::endl;
+            std::cout << "Liczba Przedzialow: " << i << " Wynik: " << parabole(A, B, i) << std::endl;
         break;
     }
 
-
 }   
-
-
