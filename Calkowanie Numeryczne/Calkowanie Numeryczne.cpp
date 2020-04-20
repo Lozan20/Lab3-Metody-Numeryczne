@@ -1,8 +1,9 @@
-﻿#include <iostream>
+#include <iostream>
+
 #define A 0
 #define B 2
 
-double trapezy(double a, double b,double przedzialy)
+double trapezy(double a, double b, double przedzialy)
 {
     double odstep = (b - a) / przedzialy;
     double suma = 0;
@@ -14,7 +15,7 @@ double trapezy(double a, double b,double przedzialy)
     return suma;
 }
 
-double parabole(double a, double b,double przedzialy)
+double parabole(double a, double b, double przedzialy)
 {
     double odstep = (b - a) / przedzialy;
     double suma = 0;
@@ -25,9 +26,17 @@ double parabole(double a, double b,double przedzialy)
     return suma;
 }
 
+void porownaj(double wynik_numeryczny)
+{
+    double wynik_analityczny = 0.80472;
+    std::cout << " Wynik: " << wynik_numeryczny << std::endl;
+    std::cout << " Roznica miedzy wynikiem analitycznym: " << abs(wynik_analityczny - wynik_numeryczny) << std::endl;
+}
+
 int main()
 {
-    int choice;  
+    double wynik_numeryczny;
+    int choice;
     std::cout << "1. Calkowanie za pomoca wzoru trapezow" << std::endl
         << "2. Calkowanie za pomoca wzoru parabol" << std::endl
         << "3. Calkowanie za pomoca wzoru trapezow dla 10 przedzialow" << std::endl
@@ -37,22 +46,32 @@ int main()
     switch (choice)
     {
     case 1:
-        std::cout <<" Wynik: " << trapezy(A,B,1);
+        wynik_numeryczny = trapezy(A, B, 1);
+        porownaj(wynik_numeryczny);
         break;
     case 2:
-        std::cout <<" Wynik: " << parabole(A,B,1);
+        wynik_numeryczny = parabole(A, B, 1);
+        porownaj(wynik_numeryczny);
         break;
     case 3:
-        std::cout <<" Wynik: " << trapezy(A, B, 10);
+        wynik_numeryczny = trapezy(A, B, 10);
+        porownaj(wynik_numeryczny);
         break;
     case 4:
         for (int i = 1; i <= 10; i++)
-            std::cout << "Liczba Przedzialow: " << i << " Wynik: " << trapezy(A, B, i) << std::endl;
+        {
+            wynik_numeryczny = trapezy(A, B, i);
+            std::cout << "Liczba Przedzialow: " << i;
+            porownaj(wynik_numeryczny);
+        }         
         break;
     case 5:
         for (int i = 1; i <= 10; i++)
-            std::cout << "Liczba Przedzialow: " << i << " Wynik: " << parabole(A, B, i) << std::endl;
+        {
+            wynik_numeryczny = parabole(A, B, i);
+            std::cout << "Liczba Przedzialow: " << i;
+            porownaj(wynik_numeryczny);
+        }
         break;
     }
-
-}   
+}
