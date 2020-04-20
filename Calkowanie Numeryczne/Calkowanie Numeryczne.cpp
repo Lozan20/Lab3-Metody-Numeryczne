@@ -37,13 +37,13 @@ int main()
     switch (choice)
     {
     case 1:
-        std::cout << trapezy(A,B,1);
+        std::cout <<" Wynik: " << trapezy(A,B,1);
         break;
     case 2:
-        std::cout << parabole(A,B,1);
+        std::cout <<" Wynik: " << parabole(A,B,1);
         break;
     case 3:
-        std::cout << trapezy(A, B, 10);
+        std::cout <<" Wynik: " << trapezy(A, B, 10);
         break;
     case 4:
         for (int i = 1; i <= 10; i++)
